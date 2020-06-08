@@ -1,0 +1,61 @@
+<html>
+<head>
+	<title>demo deep</title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>  
+	<script type="text/javascript" src="js/mobile-net.js"></script>
+	<script type="text/javascript" src="js/imagenet_classes.js"></script> 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!--<video autoplay playsinline muted id="webcam" width="640" height="480"></video>-->
+	<video id="video" width="640" height="480" autoplay controls >
+		<source src="video.mp4" type="video/mp4">
+	</video>
+	<div id="capturedimage"></div> 
+	<div id="imageshow"></div>
+</head>
+<body>
+	
+	<div class="container">
+		<div class="mobilenet-demo-container" style='height: 427px; margin-top: 55px; padding-bottom: 20px'>
+			<h2 style='text-align: center; color: white !important; background-color: #F08080'>DEMO DEEPLEARNING</h2>
+			<div class="demo-wrapper">
+				<!--<div>
+					<button id="load-button" class="input-button" onclick="loadModel()">Load Model</button>
+					
+
+					
+					
+					<input type='file' id="select-file-image" onchange="loadImageLocal()" style="display: None" />
+					<div id="progress-box" style="display: None; width: 100% !important;">
+						<img src="assets/loading.gif" id="demo-load" width="100px" />
+						<p id="progress-box-content" style="color: white;">Loading model..</p>
+					</div> 
+				</div> -->
+				
+			</div>
+			<div id='class10'>
+				<h6 class='mtt' id='mtt0'> Lái xe an toàn </h6>
+				<h6 class='mtt' id='mtt1'> Nhắn tin điện thoại bằng tay phải </h6>
+				<h6 class='mtt' id='mtt2'> Gọi điện bằng tay phải </h6>
+				<h6 class='mtt' id='mtt3'> Nhắn tin điện thoại bằng tay trái </h6>
+				<h6 class='mtt' id='mtt4'> Gọi điện bằng tay trái </h6>
+				<h6 class='mtt' id='mtt5'> Chỉnh radio </h6>
+				<h6 class='mtt' id='mtt6'> Uống nước </h6>
+				<h6 class='mtt' id='mtt7'> Nhoài người ra phía sau </h6>
+				<h6 class='mtt' id='mtt8'> Trang điểm, vuốt tóc </h6>
+				<h6 class='mtt' id='mtt9'> Nói chuyện với người khác </h6>
+			</div>
+			
+		</div>
+	</div>
+	<div style='color: red; margin-bottom: 10px; margin-left: 20px; position: absolute; top: 500px; right: 100px'> <b id='canhbao' style='font-size: 20px'></b> </div>
+	<div style='position: absolute;top: 500px;left: 300px;}'>
+					<button id="predict-button" class="btn btn-danger" onclick="predictImage()">Predict</button>
+					<div id="progress-box" style="display: None; width: 100% !important;">
+
+					</div>
+				</div>
+</body>
+</html>
